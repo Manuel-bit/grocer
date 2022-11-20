@@ -1,0 +1,662 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fulo - Grocery Store Website Template"/>
+    <meta name="keywords" content=" clean, digital, ecommerce, food, modern, multipurpose, organic, prestashop, responsive"/>
+    <meta name="author" content="Hastech"/>
+    {% if title %}
+        <title>WA'KING|{{title}}</title>
+    {% else %}
+        <title>WA'KING GROCERIES</title>
+    {% endif %}
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+    <!--== Bootstrap CSS ==-->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <!--== Simple Line Icons CSS ==-->
+    <link href="{% static 'css/simple-line-icons.css' %}" rel="stylesheet"/>
+    <!--== FancyBox CSS ==-->
+    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet"/>
+    <!--== Swiper CSS ==-->
+    <link href="{% static 'css/swiper.min.css' %}" rel="stylesheet"/>
+    <!--== Main Style CSS ==-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper home-default-wrapper">
+
+        <header class="header-wrapper">
+            <div class="header-top">
+              <div class="header-resmobile d-block">
+                <div class="header-top-inner d-block d-lg-none">
+                  <div class="header-top-info">
+                    <a href="#">Free Shipping for all orders of <span>$200</span></a>
+                  </div>
+                  <div class="header-top-action-area">
+                    <div class="info-link info-link-style2">
+                      <a href="#"><i class="icon-envelope"></i> Newsletter</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container d-none d-lg-block">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="header-top-inner">
+                      <div class="header-top-info">
+                        <a href="#">Free Shipping for all orders of <span>$200</span></a>
+                      </div>
+                      <div class="header-top-action-area">
+                        <div class="header-currency-dropdown">
+                          <button type="button" class="btn-currency dropdown-toggle" id="dropdownCurrency" data-bs-toggle="dropdown" aria-expanded="false"><span>USD $</span></button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownCurrency">
+                            <li class="dropdown-item active"><span>USD $</span></li>
+                            <li class="dropdown-item"><span>EUR €</span></li>
+                          </ul>
+                        </div>
+                        <div class="header-lang-dropdown">
+                          <button type="button" class="btn-lang dropdown-toggle" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false"><img src="static/img/photos/4.jpg" alt="Image" width="16" height="11"> <span>English</span></button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+                            <li class="dropdown-item active"><img src="static/img/photos/4.jpg" alt="Image" width="16" height="11"> <span>English</span></li>
+                            <li class="dropdown-item"><img src="static/img/photos/2.jpg" alt="Image" width="16" height="11"> <span>Français</span></li>
+                          </ul>
+                        </div>
+                        <div class="info-link">
+                          <a href="#"><i class="icon-layers"></i> My Compare (3)</a>
+                        </div>
+                        <div class="info-link info-link-style2">
+                          <a href="#"><i class="icon-envelope"></i> Newsletter</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-middle">
+              <div class="header-resmobile d-block d-lg-none">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-4 col-sm-4 col-3">
+                      <div class="header-action-area btn-action-menu">
+                        <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithSideMenu" aria-controls="offcanvasWithSideMenu">
+                          <i class="icon-menu"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                      <div class="header-logo-area">
+                        <a href="#">
+                          <img class="logo-main" src="static/img/logo.png" alt="Logo" width="102" height="45"/>
+                          <img class="logo-light" src="static/img/logo.png" alt="Logo" width="102" height="45"/>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-3">
+                      <div class="header-middle-action-area">
+                        <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                          <span class="current-item"><i class="icon-user-following icons"></i></span>
+                          <ul class="info-dropdown info-dropdown-toggle">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Sign Out</a></li>
+                          </ul>
+                        </div>
+                        <div class="header-action-cart header-minicart">
+                          <a class="btn-cart cart-icon" href="#">
+                            <span class="cart-count">2</span>
+                            <i class="icon-handbag icons"></i>
+                          </a>
+                          <div class="header-minicart-content">
+                            <div class="minicart-inner">
+                              <div class="minicart-list">
+                                <div class="minicart-item">
+                                  <a class="thumb" href="#">
+                                    <img src="staticimg/shop/13.jpg" alt="Image-HasTech" width="125" height="125">
+                                    <span>Sante Granola Choco</span>
+                                    <span class="quantity-number">1x</span>
+                                  </a>
+                                  <p class="quantity-price">$40.90</p>
+                                  <p class="quantity-dimension">Size: S</p>
+                                  <button class="minicart-remove" type="button">×</button>
+                                </div>
+                                <div class="minicart-item">
+                                  <a class="thumb" href="#">
+                                    <img src="static/img/shop/14.jpg" alt="Image-HasTech" width="125" height="125">
+                                    <span>Purple Grape Width</span>
+                                    <span class="quantity-number">1x</span>
+                                  </a>
+                                  <p class="quantity-price">$44.10</p>
+                                  <p class="quantity-dimension">Size: S</p>
+                                  <button class="minicart-remove" type="button">×</button>
+                                </div>
+                              </div>
+                              <div class="minicart-total">
+                                <div class="minicart-price">
+                                  <span>Subtotal</span>
+                                  <span class="total">$85.00</span>
+                                </div>
+                                <div class="minicart-price">
+                                  <span>Shipping</span>
+                                  <span class="total">$7.00</span>
+                                </div>
+                                <div class="minicart-price">
+                                  <span>Taxes</span>
+                                  <span class="total">$85.00</span>
+                                </div>
+                                <div class="minicart-price minicart-subtotal">
+                                  <span>Total</span>
+                                  <span class="total">$92.00</span>
+                                </div>
+                              </div>
+                              <div class="minicart-buttons">
+                                <a class="cart-button" href="#">Checkout</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="header-search-box">
+                        <form action="#" method="post">
+                          <div class="form-input-group">
+                            <input type="text" id="search" placeholder="Search our catalog">
+                            <button type="submit" class="btn-src">
+                              <i class="icon-magnifier"></i>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container d-none d-lg-block">
+                <div class="row align-items-center">
+                  <div class="col-3 col-xl-3 col-lg-2">
+                    <div class="header-logo-area">
+                      <a href="#">
+                        <img class="logo-main" src="static/img/logo.png" alt="Logo" width="102" height="45"/>
+                        <img class="logo-light" src="static/img/logo.png" alt="Logo" width="102" height="45"/>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-9 col-xl-9 col-lg-10">
+                    <div class="header-middle-right">
+                      <div class="header-action-phone">
+                        <div class="icon">
+                          <img src="static/img/icons/phone.png" alt="Icon" width="41" height="43">
+                        </div>
+                        <div class="phone">
+                          <span>need help?</span> <a href="tel:+00(9)3456789">+00 (9) 3456 789</a>
+                        </div>
+                      </div>
+                      <div class="header-search-box">
+                        <form action="#" method="post">
+                          <div class="form-input-group">
+                            <input type="text" id="search2" placeholder="Search our catalog">
+                            <button type="submit" class="btn-src">
+                              <i class="icon-magnifier"></i>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="header-middle-action-area">
+                        <div class="header-action-wishlist">
+                          <a class="btn-wishlist" href="#">
+                            <span class="cart-count">0</span>
+                            <i class="icon-heart"></i>
+                          </a>
+                        </div>
+                        <div class="header-action-cart header-minicart">
+                          <a class="btn-cart cart-icon" href="#">
+                            <span class="cart-count">2</span>
+                            <i class="icon-handbag"></i>
+                          </a>
+                          <span class="cart-amount">$91.10</span>
+                          <div class="header-minicart-content">
+                            <div class="minicart-inner">
+                              <div class="minicart-list">
+                                <div class="minicart-item">
+                                  <a class="thumb" href="#">
+                                    <img src="static/img/shop/13.jpg" alt="Image-HasTech" width="125" height="125">
+                                    <span>Sante Granola Choco</span>
+                                    <span class="quantity-number">1x</span>
+                                  </a>
+                                  <p class="quantity-price">$40.90</p>
+                                  <p class="quantity-dimension">Size: S</p>
+                                  <button class="minicart-remove" type="button">×</button>
+                                </div>
+                                <div class="minicart-item">
+                                  <a class="thumb" href="#">
+                                    <img src="static/img/shop/14.jpg" alt="Image-HasTech" width="125" height="125">
+                                    <span>Purple Grape Width</span>
+                                    <span class="quantity-number">1x</span>
+                                  </a>
+                                  <p class="quantity-price">$44.10</p>
+                                  <p class="quantity-dimension">Size: S</p>
+                                  <button class="minicart-remove" type="button">×</button>
+                                </div>
+                              </div>
+                              <div class="minicart-total">
+                                <div class="minicart-price">
+                                  <span>Subtotal</span>
+                                  <span class="total">$85.00</span>
+                                </div>
+                                <div class="minicart-price">
+                                  <span>Shipping</span>
+                                  <span class="total">$7.00</span>
+                                </div>
+                                <div class="minicart-price">
+                                  <span>Taxes</span>
+                                  <span class="total">$85.00</span>
+                                </div>
+                                <div class="minicart-price minicart-subtotal">
+                                  <span>Total</span>
+                                  <span class="total">$92.00</span>
+                                </div>
+                              </div>
+                              <div class="minicart-buttons">
+                                <a class="cart-button" href="#">Checkout</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-area header-default sticky-header">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <div class="vertical-menu menu-style-two">
+                      <button class="menu-btn"><span>All Department</span></button>
+                      <ul class="vmenu-content vmenu-content-none">
+                        <li class="menu-item">
+                          <a class="menu-item-title" href="#">Home Decor<i class="icon-arrow-right"></i></a>
+                          <ul class="verticale-mega-menu column-two flex-wrap">
+                            <li>
+                              <a class="title" href="#"><strong>Fresh Fruit</strong></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Bananas</a></li>
+                                <li><a href="#">Apples & Pears</a></li>
+                                <li><a href="#">Berries & Cherries</a></li>
+                                <li><a href="#">Oranges & Citrus Fruit</a></li>
+                                <li><a href="#">Grapes</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href=""><span><strong>Fresh Vegetables</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Potatoes & Sweet Potatoes</a></li>
+                                <li><a href="#">Onions & Leeks</a></li>
+                                <li><a href="#">Carrots & Root Vegetables</a></li>
+                                <li><a href="#">Broccoli & Cauliflower</a></li>
+                                <li><a href="#">Cabbages & Greens</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href="#"><span><strong>Fresh Salad</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Lettuce & Salad bags</a></li>
+                                <li><a href="#">Tomatoes</a></li>
+                                <li><a href="#">Cucumber</a></li>
+                                <li><a href="#">Celery</a></li>
+                                <li><a href="#">Peppers</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <!-- sub menu -->
+                        </li>
+                        <li class="menu-item">
+                          <a class="menu-item-title" href="#">Fresh Food<i class="icon-arrow-right"></i></a>
+                          <ul class="verticale-mega-menu column-two flex-wrap">
+                            <li>
+                              <a class="title" href="#"><strong>Milk, Butter & Eggs</strong></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Candle Salad</a></li>
+                                <li><a href="#">Frogeye Salad</a></li>
+                                <li><a href="#">Green Papaya</a></li>
+                                <li><a href="#">Waldorf Salad</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href="#"><span><strong>Potatoes & Sweet Potatoes</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Louis Dressings</a></li>
+                                <li><a href="#">French Dressings</a></li>
+                                <li><a href="#">Gingner Dressings</a></li>
+                                <li><a href="#">Italian Dressings</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href="#"><span><strong>Onions & Leeks</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Cappon Magro</a></li>
+                                <li><a href="#">Dakos</a></li>
+                                <li><a href="#">Fattoush</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu-item">
+                          <a class="menu-item-title" href="#">Kitchen & Dinning<i class="icon-arrow-right"></i></a>
+                          <ul class="verticale-mega-menu column-two flex-wrap">
+                            <li>
+                              <a class="title" href="#"><strong>Cabbages & Greens</strong></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Baking Cups</a></li>
+                                <li><a href="#">Baking Moulds</a></li>
+                                <li><a href="#">Bundt Pans</a></li>
+                                <li><a href="#">Cake Moulds</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href="#"><span><strong>Broccoli & Cauliflower</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Cake Pans</a></li>
+                                <li><a href="#">Pots</a></li>
+                                <li><a href="#">Pans</a></li>
+                                <li><a href="#">Living</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="title" href="#"><span><strong>Seafood pizzas</strong></span></a>
+                              <ul class="submenu-item">
+                                <li><a href="#">Baking Cups</a></li>
+                                <li><a href="#">Baking Dishes</a></li>
+                                <li><a href="#">Baking Mats</a></li>
+                                <li><a href="#">Pastry Boards</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">Bed & Bath</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">Living Room Sets</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">Console Tables</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">End Tables</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">TV Stands</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">Bedroom</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">Dining Tables</a></li>
+                        <li class="menu-item"><a class="menu-item-title" href="#">More Categories</a></li>
+                      </ul>
+                      <!-- menu content -->
+                    </div>
+                  </div>
+                  <div class="col-xl-7 col-lg-8 d-none d-lg-block">
+                    <div class="header-navigation-area">
+                      <ul class="main-menu nav position-relative">
+                        <li class="has-submenu active"><a href="#">Home</a>
+                          <ul class="submenu-nav">
+                            <li><a href="#">Home One</a></li>
+                            <li><a href="#">Home Two</a></li>
+                            <li><a href="#">Home Three</a></li>
+                            <li><a href="#">Home Four</a></li>
+                          </ul>
+                        </li>
+                        <li class="has-submenu position-static"><a href="#/"><span>Shop</span></a>
+                          <ul class="submenu-nav submenu-nav-mega submenu-nav-banner">
+                            <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Layouts</span></a>
+                              <ul>
+                                <li><a href="#">Shop 3 Column</a></li>
+                                <li><a href="#">Shop 4 Column</a></li>
+                                <li><a href="#l">Shop Left Sidebar</a></li>
+                                <li><a href="#">Shop Right Sidebar</a></li>
+                                <li><a href="#">Shop No Sidebar</a></li>
+                              </ul>
+                            </li>
+                            <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Pages</span></a>
+                              <ul>
+                                <li><a href="#">Cart page</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Compare</a></li>
+                              </ul>
+                            </li>
+                            <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Product Types</span></a>
+                              <ul>
+                                <li><a href="#">Product Details</a></li>
+                                <li><a href="#">Product Variable</a></li>
+                                <li><a href="#">Product Grouped</a></li>
+                              </ul>
+                            </li>
+                            <li class="megamenu-banner-item"><a href="s#" class="megamenu-banner" data-bg-img="static/img/photos/megamenu-banner.webp"></a></li>
+                          </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Pages</a>
+                          <ul class="submenu-nav">
+                            <li><a href="#">Login / Register</a></li>
+                            <li><a href="#">Coming soon</a></li>
+                            <li><a href="#">404</a></li>
+                          </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#">Blog</a>
+                          <ul class="submenu-nav">
+                            <li><a href="#">Blog 3 Column</a></li>
+                            <li><a href="#">Blog 4 Column</a></li>
+                            <li><a href="#">Blog Left Sidebar</a></li>
+                            <li><a href="#">Blog Right Sidebar</a></li>
+                            <li><a href="#">Blog No Sidebar</a></li>
+                            <li><a href="#">Blog Details Left Sidebar</a></li>
+                            <li><a href="#">Blog Details Right Sidebar</a></li>
+                            <li><a href="#">Blog Details No Sidebar</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-xl-2 col-lg-1 d-none d-lg-block">
+                    <div class="header-action-dropdown-acc header-action-dropdown-toggle">
+                      <span class="current-item">Login</span>
+                      <ul class="info-dropdown info-dropdown-toggle">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Checkout</a></li>
+                        <li><a href="#">Sign Out</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          {% block content %}
+
+          {% endblock %}
+
+          <footer class="footer-area">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-xs-12 col-md-6 mb-sm-30 mb-xs-20">
+                    <div class="newsletter-content">
+                      <h4>Subscribe Newsletter and Get Discount</h4>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <form class="newsletter-form" action="#">
+                      <input class="form-control" type="text" id="email" placeholder="Your email address">
+                      <button class="btn btn-theme" type="submit">Sign Up</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-main">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-4">
+                    <div class="widget-item">
+                      <h4 class="widget-title">Contact Info</h4>
+                      <h4 class="widget-title widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#dividerId-5">Contact Info Us</h4>
+                      <div id="dividerId-5" class="collapse widget-collapse-body">
+                        <div class="widget-contact-info">
+                          <div class="contact-info-item mb-20 mb-sm-10">
+                            <div class="icon-box">
+                              <i class="icon-home"></i>
+                            </div>
+                            <span>45 Grand Central New York NY 1017 United State USA</span>
+                          </div>
+                          <div class="contact-info-item">
+                            <div class="icon-box">
+                              <i class="icon-envelope"></i>
+                            </div>
+                            <span>Email: <a href="mailto://contact@domain.com">Contact@domain.com</a></span>
+                          </div>
+                          <div class="contact-info-item">
+                            <div class="icon-box">
+                              <i class="icon-call-in"></i>
+                            </div>
+                            <span>Phone: <a href="tel://+0123456789">01: +00 (9) 123 3456 789</a></span>
+                          </div>
+                          <div class="contact-info-item">
+                            <div class="icon-box">
+                              <i class="icon-printer"></i>
+                            </div>
+                            <span>Fax: +00 (9) 643 6543 898</span>
+                          </div>
+                          <div class="contact-info-item">
+                            <div class="icon-box">
+                              <i class="icon-calendar"></i>
+                            </div>
+                            <span>Mon-Sat 9:00pm - 5:00pm Sun:Closed</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-2">
+                    <div class="widget-item">
+                      <h4 class="widget-title">Information</h4>
+                      <h4 class="widget-title widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#dividerId-6">Information</h4>
+                      <div id="dividerId-6" class="collapse widget-collapse-body">
+                        <nav class="widget-menu-wrap">
+                          <ul class="nav-menu nav">
+                            <li><a href="index.html">Delivery</a></li>
+                            <li><a href="index.html">Legal Notice</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="index.html">Secure payment</a></li>
+                            <li><a href="index.html">Sitemap</a></li>
+                            <li><a href="index.html">Stores</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3">
+                    <div class="widget-item">
+                      <h4 class="widget-title">My Account</h4>
+                      <h4 class="widget-title widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#dividerId-7">My Account</h4>
+                      <div id="dividerId-7" class="collapse widget-collapse-body">
+                        <nav class="widget-menu-wrap">
+                          <ul class="nav-menu nav">
+                            <li><a href="index.html">Terms And Conditions Of Use</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="index.html">Secure payment</a></li>
+                            <li><a href="index.html">Sitemap</a></li>
+                            <li><a href="index.html">Stores</a></li>
+                            <li><a href="login-register.html">Login</a></li>
+                            <li><a href="login-register.html">My account</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3">
+                    <div class="widget-item">
+                      <h4 class="widget-title">Products</h4>
+                      <h4 class="widget-title widget-collapsed-title collapsed" data-bs-toggle="collapse" data-bs-target="#dividerId-8">Products</h4>
+                      <div id="dividerId-8" class="collapse widget-collapse-body">
+                        <nav class="widget-menu-wrap">
+                          <ul class="nav-menu nav">
+                            <li><a href="index.html">Delivery</a></li>
+                            <li><a href="index.html">Legal Notice</a></li>
+                            <li><a href="index.html">Secure payment</a></li>
+                            <li><a href="index.html">Prices drop</a></li>
+                            <li><a href="index.html">New products</a></li>
+                            <li><a href="index.html">Best sales</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="container">
+                <div class="footer-bottom-content">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="widget-copyright">
+                        <p>© 2021 <span>FULO</span>. Made with <i class="icon-heart icon-heart-color"></i> by <a target="_blank" href="https://themeforest.net/user/hastech/portfolio">Hastech</a></p>
+                      </div>
+                      <ul class="widget-social-icons">
+                        <li><i class="icon-social-facebook"></i></li>
+                        <li><i class="icon-social-twitter"></i></li>
+                        <li><i class="icon-social-youtube"></i></li>
+                        <li><i class="icon-social-instagram"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-2">
+                      <a class="footer-logo" href="index.html">
+                        <img src="assets/img/logo.png" alt="Logo" width="102" height="45">
+                      </a>
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="widget-payment-info">
+                        <span>Allow payment base on</span>
+                        <div class="thumb">
+                          <a href="shop.html"><img src="assets/img/photos/payment1.png" alt="Image" width="343" height="33"></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="{% static 'js/jquery-main.js' %}"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="{% static 'js/jquery-migrate.js' %}"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!--=== jquery Swiper Min Js ===-->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <!--=== jquery Fancybox Min Js ===-->
+    <script src="{% static 'js/fancybox.min.js' %}"></script>
+    <!--=== jquery Countdown Js ===-->
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <!--=== jquery Zoom Min Js ===-->
+    <script src="{% static 'js/jquery-zoom.min.js' %}"></script>
+
+    <!--=== Custom Js ===-->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
